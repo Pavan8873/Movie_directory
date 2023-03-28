@@ -1,0 +1,13 @@
+
+#main{
+    display: flex;
+    flex-direction: row;
+}
+#div1{
+    width:40%;
+    display: inline-block;
+}
+#div2{
+    width :40%;
+    display: inline-block;
+}
