@@ -13,31 +13,20 @@ app.set('views','./views');
 
 app.use(express.static('./assests'));
 app.use(expressLayouts);
+
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
 app.use('/',require('./routes'));
-
-app.post('/create-movie',async function(req,res){
-
-    const movie= await Movie.create({
-        movie_name:req.body.movie_name,
-        rating:req.body.rating,
-        duration:req.body.duration
-    })
-    // res.status(201).json({message:"created succesfully"})
-    return res.redirect('back');
-    
-
-})
-
-
 
 
 app.listen(port,function(err){
     if(err){
-        console.log('error in running th eserver');
+        console.log('error in running th eserver',err);
     }
     console.log(`Server is running on port:${port}`);
 })

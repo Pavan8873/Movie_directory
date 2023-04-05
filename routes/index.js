@@ -6,7 +6,8 @@ const homeController = require('../controllers/home_controller');
 
 
 router.get('/',homeController.home);
-router.get('/create-movie',homeController.form);
+router.get('/form-page',homeController.formPage);
+router.post('/create-movie',homeController.form);
 // router.post('/create-movie',homeController.addData);
 
 // router.post('/create-movie',homeController.addData);

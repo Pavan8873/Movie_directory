@@ -11,3 +11,16 @@
     width :40%;
     display: inline-block;
 }
+
+
+.footer{
+    width: 100% !important;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 100%;
+    background-color: aliceblue;
+    border-top: 1px solid black;
+}
+footer{
+    width: 100% !important;
+}
